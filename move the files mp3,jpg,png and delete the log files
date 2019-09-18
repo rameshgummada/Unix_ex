@@ -1,0 +1,43 @@
+#!/bin/ksh
+# Author: Ramesh Gummadavelli
+
+myLoop()
+{
+vRDEXT=$1
+vRDFIL=$2
+case $vRDEXT in
+             jpg|png)
+			      if [[ ! -d $vHDIR/$vRDEXT ]]; then
+				        mkdir -vp $vHDIR/images
+				  fi
+				  mv -v $vHDIR/$vRDFIL $vHDIR/images/$vRDFIL
+				  ;;
+			 mov|mp3)
+			      if [[ ! -d $vHDIR/$vRDEXT ]]; then
+				          mkdir -vp $vHDIR/movies
+				  fi
+				  mv -v $vHDR/$vRDFIL $vHDIR/movies/$vRDFIL
+				  ;;
+			 log)
+			 
+			      rm -vf $vHDIR/$vRDFIL
+				  ;;
+		     *);;
+		esac
+}
+
+
+# Declare Variables
+vHDIR=/var/tmp/ram123
+vEXT=={ .jpg, .png, .mp3, .log} 2>/dev/null
+#echo $vEXT
+
+for vPARAM in `ls *$vEXT`
+do
+
+# echo $vPARAM
+  vFEXT="${PvPARAM##*.}"
+  myLoop $vFEXT $vPARAM
+ 
+done
+
