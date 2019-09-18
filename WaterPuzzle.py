@@ -1,5 +1,6 @@
  #-----------------------------------------------------------------#
- #                                                                 #
+ #If you had a 5-liter bowl and a 3-liter bowl, and an             #
+ #unlimited access to water, how would you measure exactly 4 liters?#                                                                 #
  # Author:                                                         #
  #                                                                 #
  # Language: Python                                                #
